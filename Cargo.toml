@@ -7,7 +7,7 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Rahul Mehra"]
 license = "MIT"
-repository = "https://github.com/rahulmehra/local-app-runner"
+repository = "https://github.com/lolstring/local-app-runner"
 
 # The profile that 'dist' will build with
 [profile.dist]

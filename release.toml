@@ -1,0 +1,6 @@
+tag-name = "v{{version}}"
+
+pre-release-hook = ["cargo", "test", "--workspace"]
+
+push = true
+publish = false

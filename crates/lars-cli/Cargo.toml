@@ -7,6 +7,7 @@ license.workspace = true
 description = "CLI for LARS (Local App Runner Service) - manage local services via tmux"
 repository = "https://github.com/lolstring/local-app-runner"
 homepage = "https://github.com/lolstring/local-app-runner"
+publish = false
 
 [[bin]]
 name = "lars"
