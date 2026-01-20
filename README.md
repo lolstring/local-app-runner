@@ -16,7 +16,7 @@ A CLI tool for managing local development services using tmux. Start, stop, and 
 ### Shell Script (Linux/macOS)
 
 ```bash
-curl --proto '=https' --tlsv1.2 -LsSf https://github.com/lolstring/local-app-runner/releases/latest/download/lars-installer.sh | sh
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/lolstring/local-app-runner/releases/latest/download/lars-cli-installer.sh | sh
 ```
 
 ### Homebrew (macOS/Linux)
@@ -29,7 +29,7 @@ brew install lars
 ### PowerShell (Windows)
 
 ```powershell
-powershell -ExecutionPolicy Bypass -c "irm https://github.com/lolstring/local-app-runner/releases/latest/download/lars-installer.ps1 | iex"
+powershell -ExecutionPolicy Bypass -c "irm https://github.com/lolstring/local-app-runner/releases/latest/download/lars-cli-installer.ps1 | iex"
 ```
 
 ### From Source
@@ -47,6 +47,9 @@ lars add "npm run dev" --name frontend -d ~/projects/my-app
 # Add another service
 lars add "cargo run" --name backend -d ~/projects/api
 
+# Add another local service
+lars add 'OLLAMA_ORIGINS=* OLLAMA_DEBUG="1" ollama serve'
+
 # Start all services
 lars start-all
 
@@ -57,7 +60,7 @@ lars list
 lars logs frontend -f
 
 # Attach to a service's tmux session
-lars attach backend
+lars attach ollama
 
 # Stop everything
 lars stop-all
